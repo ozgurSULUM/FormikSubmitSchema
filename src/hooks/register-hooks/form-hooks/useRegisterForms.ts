@@ -1,16 +1,24 @@
-import useExampleForm from './useExampleForm';
-import useSecondForm from './useSecondForm';
+import useExampleForm from "./useExampleForm";
+import useSecondForm from "./useSecondForm";
 
 const useRegisterForms = () => {
-    const exampleFormContext = useExampleForm();
-    const secondFormContext = useSecondForm();
+  const exampleFormContext = useExampleForm();
+  const secondFormContext = useSecondForm();
 
-    const submitForms = () => {
-        exampleFormContext.submitForm();
-        secondFormContext.submitForm();
-    }
-    
-    return { exampleFormContext, secondFormContext, submitForms };
-}
+  /*
+    useEffect(()=>{
+        if(isFirstCardValid && isSecondCardValid && ...){
+            goToNextPage();
+        }
+    },[isFirstCardValid, isSecondCardValid, ...])
+    */
+
+  const submitForms = () => {
+    exampleFormContext.submitForm();
+    secondFormContext.submitForm();
+  };
+
+  return { exampleFormContext, secondFormContext, submitForms };
+};
 
 export default useRegisterForms;

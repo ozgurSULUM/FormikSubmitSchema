@@ -1,5 +1,4 @@
 import { createContext } from 'react';
-import { FormikProps } from 'formik';
 import ExampleForm from './components/ExampleForm';
 import SecondForm from './components/SecondForm';
 import useRegisterForms from './hooks/register-hooks/form-hooks/useRegisterForms';
